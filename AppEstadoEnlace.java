@@ -143,7 +143,7 @@ class AppEstadoEnlace {
         //Imprimir la matriz de adyacencia
         for (int x = 0; x < grafo.length; x++) {
             for (int y = 0; y < grafo[x].length; y++) {
-                System.out.print("|" + grafo[x][y] + "|");
+                System.out.print("|\t" + grafo[x][y] + "\t|");
             }
             System.out.println(" ");
         }
@@ -158,6 +158,7 @@ class AppEstadoEnlace {
         //Calcular el tiempo de ejecución del programa
         long TInicio = System.nanoTime();
 
+        //Función para calcular el tiempo de ejecución
         long TFin = System.nanoTime();
         long tiempo = (TFin - TInicio);
         System.out.println("");
