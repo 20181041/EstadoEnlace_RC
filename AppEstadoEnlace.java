@@ -148,7 +148,7 @@ class AppEstadoEnlace {
             System.out.println(" ");
         }
         
-        //Calcular el tiempo de ejecución del programa
+        //Guardar el tiempo de inicio ejecución del programa
         long TInicio = System.nanoTime();
         
         //Ejecutar dijkstra para la matriz ingresada
@@ -158,8 +158,8 @@ class AppEstadoEnlace {
         int origen = Integer.parseInt(in.readLine());
         System.out.println("-------------------------------------------------------------------");
         t.dijkstra(grafo, origen);
-
-        //Función para calcular el tiempo de ejecución
+        
+        //Guardar el tiempo al final de la ejecución del programa
         long TFin = System.nanoTime();
         long tiempo = (TFin - TInicio);
         System.out.println("");
