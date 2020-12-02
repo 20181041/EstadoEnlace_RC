@@ -147,21 +147,21 @@ class AppEstadoEnlace {
             }
             System.out.println(" ");
         }
+        System.out.println("-------------------------------------------------------------------");
+        System.out.println("Ingrese el nodo desde el cual se analizará el camino más corto: ");
+        int origen = Integer.parseInt(in.readLine());
+        System.out.println("-------------------------------------------------------------------");
         
         //Guardar el tiempo de inicio ejecución del programa
         long TInicio = System.nanoTime();
         
         //Ejecutar dijkstra para la matriz ingresada
         AppEstadoEnlace t = new AppEstadoEnlace();
-        System.out.println("-------------------------------------------------------------------");
-        System.out.println("Ingrese el nodo desde el cual se analizará el camino más corto: ");
-        int origen = Integer.parseInt(in.readLine());
-        System.out.println("-------------------------------------------------------------------");
         t.dijkstra(grafo, origen);
         
         //Guardar el tiempo al final de la ejecución del programa
         long TFin = System.nanoTime();
-        long tiempo = (TFin - TInicio);
+        long tiempo = (TFin - TInicio)/1000;
         System.out.println("");
         System.out.println("Tiempo de ejecución del programa en milisegundos: " + tiempo);
     }
